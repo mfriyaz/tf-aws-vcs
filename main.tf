@@ -1,4 +1,6 @@
-
+resource "aws_key_pair" "Chearit_EC201" {
+  key_name   = "Chearit_EC201 # Change to your desired key pair name
+  }
 resource "aws_security_group" "rdp" {
   name        = "allow_rdp"
   description = "Allow RDP inbound traffic"
