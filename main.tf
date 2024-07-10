@@ -1,6 +1,8 @@
-resource "aws_key_pair" "Chearit_EC201" {
-  key_name   = "Chearit_EC201 # Change to your desired key pair name
-  }
+resource "aws_key_pair" "example" {
+  key_name   = "example-key" # Change to your desired key pair name
+  public_key = file("~/.ssh/id_rsa.pub") # Change to your public key file path
+}
+
 resource "aws_security_group" "rdp" {
   name        = "allow_rdp"
   description = "Allow RDP inbound traffic"
@@ -23,7 +25,7 @@ resource "aws_security_group" "rdp" {
 resource "aws_instance" "windows" {
   ami           = "ami-0c55b159cbfafe1f0" # Change to a valid Windows AMI ID in your region
   instance_type = "t2.micro"
-  key_name      = aws_key_pair.Chearit_EC201.key_name
+  key_name      = aws_key_pair.example.key_name
   security_groups = [aws_security_group.rdp.name]
   
   tags = {
