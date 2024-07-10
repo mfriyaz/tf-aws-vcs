@@ -1,6 +1,6 @@
 resource "aws_key_pair" "example" {
   key_name   = "example-key" # Change to your desired key pair name
-  public_key = file("D:\AUTOMATION\2024") # Change to your public key file path
+  public_key = file("D:/AUTOMATION/2024") # Change to your public key file path
 }
 
 resource "aws_security_group" "rdp" {
