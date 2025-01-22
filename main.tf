@@ -3,6 +3,6 @@ resource "aws_instance" "MyEC2" {
   instance_type = "t2.micro"
    
   tags = {
-    Name = "Amazon Linux"
+    Name = "Amazon EC2 Linux"
   }
 }
