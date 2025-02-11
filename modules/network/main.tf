@@ -12,5 +12,9 @@ resource "aws_subnet" "main_01" {
   cidr_block = var.subnet_cidr
   availability_zone = var.availability_zone
   map_public_ip_on_launch = true
+
+  tags = {
+    Name = "Riyaz Sub01"
+  }
   
 }
