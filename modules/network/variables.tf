@@ -10,7 +10,7 @@ variable "sg_name" {
     description = "Name of the security group"
     type = string  
 }
-variable "avavailability_zone" {
+variable "availability_zone" {
     description = "AWS availability zone for the subnet"
     type = string  
 }
