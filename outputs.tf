@@ -1,6 +1,7 @@
 output "instance_id" {
-    value = aws_instance.inported_ec2.id  
+  value = module.compute.instance_id
 }
-output "sg_id" {
-    value = aws_security_group.imported_sg.id
+
+output "instance_public_ip" {
+  value = module.compute.instance_public_ip
 }

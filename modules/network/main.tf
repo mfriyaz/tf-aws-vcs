@@ -6,7 +6,7 @@ resource "aws_vpc" "main" {
 resource "aws_subnet" "main" {
     vpc_id = aws_vpc.main.id
     cidr_block = var.subnet_cidr
-    avavailability_zone = var.avavailability_zone
+    availability_zone = var.availability_zone
     map_public_ip_on_launch = true 
 }
 resource "aws_security_group" "main" {
