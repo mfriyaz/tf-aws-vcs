@@ -10,7 +10,7 @@ module "network" {
 
 module "compute" {
   source            = "./modules/compute"
-  ami_id            = "ami-0c55b159cbfafe1f0" # Replace with a valid AMI ID
+  ami_id            = "ami-0b03299ddb99998e9" # Replace with a valid AMI ID
   instance_type     = "t2.micro"
   subnet_id         = module.network.subnet_id
   security_group_id = module.network.security_group_id
