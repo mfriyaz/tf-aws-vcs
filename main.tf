@@ -1,6 +1,7 @@
 module "network" {
  source = "./modules/network" 
     vpc_cidr = "10.0.0.0/16"  
+    vpc_name = "main_vpc"
     subnet_cidr = "10.0.1.0/24"
     availability_zone   = "ap-southeast-1a"
   sg_name             = "my-security-group"
