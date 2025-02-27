@@ -2,7 +2,7 @@ module "network" {
  source = "./modules/network" 
     vpc_cidr = "10.0.0.0/16"  
     subnet_cidr = "10.0.1.0/24"
-    availability_zone   = "ap-southeast-1"
+    availability_zone   = "ap-southeast-1a"
   sg_name             = "my-security-group"
   ingress_port        = 22
   ingress_cidr_blocks = ["0.0.0.0/0"]
